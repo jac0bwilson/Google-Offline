@@ -4,10 +4,10 @@ def getRequest(request):
     request_json = request.get_json()
     request_args = request.args
 
-    if request_json and 'body' in request_json:
-        body = request_json['body']
-    elif request_args and 'body' in request_args:
-        body = request_args['body']
+    if request_json and 'Body' in request_json:
+        body = request_json['Body']
+    elif request_args and 'Body' in request_args:
+        body = request_args['Body']
     else:
         body = 'Default'
     
